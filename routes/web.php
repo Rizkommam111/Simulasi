@@ -22,7 +22,14 @@ use function Livewire\name;
 |
 */
 
-Route::view('/', 'welcome');
+Route::get('/', function(){
+    if(!auth())
+    {
+        return redirect('/login');
+    }else{
+        return redirect('/dashboard');
+    }
+});
 
 Route::get('dashboard', LivewireWelcome::class)
     ->middleware(['auth', 'verified'])
