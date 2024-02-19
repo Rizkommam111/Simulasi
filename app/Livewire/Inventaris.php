@@ -28,9 +28,12 @@ class Inventaris extends Component
     {
         if($this->cari != null)
         {
-            $inventaris = ModelInventaris::where("nama_barang", 'LIKE', "%{$this->cari}%")->get();
+            $inventaris = ModelInventaris::where("nama_barang", 'LIKE', "%{$this->cari}%")
+                ->orWhere("kondisi", 'LIKE', "%{$this->cari}%")
+                ->orWhere("stok", 'LIKE', "%{$this->cari}%")
+                ->get();
         }else{
-            $inventaris = ModelInventaris::all();
+            $inventaris = ModelInventaris::paginate(5);
 
         }
         return view('livewire.inventaris', compact('inventaris'));

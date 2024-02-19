@@ -67,7 +67,9 @@
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{{$barang->kondisi}}</td>
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{{$barang->stok}}</td>
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{{$barang->tanggal_register}}</td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{{$barang->foto}}</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
+                                                    <img style="width: 100px;" src="/storage/photos/{{$barang->foto}}" alt="">
+                                                </td>
                                                 <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                                     <button type="button" wire:click="edit({{$barang->id}})" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                                                         Edit
@@ -80,10 +82,9 @@
                                             @endforeach
                                         </tbody>
                                     </table>
-
                                 </div>
-
                             </div>
+                            {{$inventaris->links()}}
                             <x-primary-button type="button" wire:click="addData()" class=" bg-green-400 active:bg-green-200 hover:bg-green-500 focus:bg-green-700 mt-2">
                                 Add New Data
                             </x-primary-button>

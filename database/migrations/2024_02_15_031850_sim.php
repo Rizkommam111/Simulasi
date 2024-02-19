@@ -29,7 +29,7 @@ return new class extends Migration
             $table->date('tanggal_kembali');
             $table->enum('status', ['Proses', "Sudah Kembali", 'Belum Kembali']);
             $table->string('petugas');
-            $table->foreign('id_inventaris')->references('id')->on('inventaris');
+            $table->foreign('id_inventaris')->references('id')->on('inventaris')->cascadeOnDelete();
         });
     }
 

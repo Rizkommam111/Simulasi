@@ -13,12 +13,12 @@
                             <!-- nama_barang -->
                             <div>
                                 <x-input-label for="nama_barang" :value="__('Nama Barang')" />
-                                <x-text-input wire:model="nama_barang" id="nama_barang" class="block mt-1 w-full" type="text" nama_barang="nama_barang" required autofocus autocomplete="nama_barang" />
+                                <x-text-input wire:model="nama_barang" id="nama_barang" class="block mt-1 w-full" type="text" nama_barang="nama_barang"  autofocus autocomplete="nama_barang" />
                                 <x-input-error :messages="$errors->get('nama_barang')" class="mt-2" />
                             </div>
                             <div>
                                 <x-input-label for="kondisi" :value="__('Kondisi')" />
-                                <select wire:model.live="kondisi" id="kondisi" class="block mt-1 w-full" type="select" nama_barang="nama_barang" required autofocus autocomplete="nama_barang" >
+                                <select wire:model.live="kondisi" id="kondisi" class="block mt-1 w-full" type="select" nama_barang="nama_barang"  autofocus autocomplete="nama_barang" >
                                     <option value="NULL">HARUS DI ISI</option>
                                     <option value="Baik">Baik</option>
                                     <option value="Perbaikan">Perbaikan</option>
@@ -27,12 +27,12 @@
                             </div>
                             <div>
                                 <x-input-label for="stok" :value="__('Stok')" />
-                                <x-text-input wire:model="stok" id="stok" class="block mt-1 w-full" type="number" nama_barang="nama_barang" required autofocus autocomplete="nama_barang" />
+                                <x-text-input wire:model="stok" id="stok" class="block mt-1 w-full" type="number" nama_barang="nama_barang"  autofocus autocomplete="nama_barang" />
                                 <x-input-error :messages="$errors->get('stok')" class="mt-2" />
                             </div>
                             <div>
                                 <x-input-label for="tanggal_register" :value="__('Tanggal Register')" />
-                                <x-text-input wire:model="tanggal_register" id="tanggal_register" class="block mt-1 w-full" type="date" nama_barang="nama_barang" required autofocus autocomplete="nama_barang" />
+                                <x-text-input wire:model="tanggal_register" id="tanggal_register" class="block mt-1 w-full" type="date" nama_barang="nama_barang"  autofocus autocomplete="nama_barang" />
                                 <x-input-error :messages="$errors->get('tanggal_register')" class="mt-2" />
                             </div>
                             <div>
